@@ -1,0 +1,50 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>js09</title>
+</head>
+<body>
+	<label >Nhập số phần tử:</label>
+	<input type="number" id="sopt" value="10">
+	<br>
+	<button onClick="taomang()">Tạo Mảng</button>
+	<button onClick="mangtang()">Sắp xếp mảng tăng</button>
+	<button onClick="manggiam()">Sắp xếp mảng giảm</button>
+	<br>
+	<label>Mảng ban đầu:</label>
+	<input type="text" id="arr1">
+	<br>
+	<label>Mảng sắp xếp tăng:</label>
+	<input type="text" id="arr2">
+	<br>
+	<label>Mảng sắp xếp giảm:</label>
+	<input type="text" id="arr3">
+	<script>
+		function taomang(){
+			var i;
+			var n=document.getElementById("sopt").value;
+			arr = new Array(n);
+			for(i=0; i<n; i++)
+				arr[i] = Math.floor(Math.random() *100)% 50;
+			document.getElementById("arr1").value = arr.join(" ");
+		}
+		function tang(a,b){
+			return a - b;
+		}
+		function mangtang(){
+			arr.sort(tang);
+			document.getElementById("arr2").value = arr.join(" ");
+		}
+		
+		function giam(a,b){
+			return b-a;
+		}
+		
+		function manggiam(){
+			arr.sort(giam);
+			document.getElementById("arr3").value = arr.join(" ");
+		}
+	</script>
+</body>
+</html>
