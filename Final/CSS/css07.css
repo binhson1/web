@@ -1,0 +1,102 @@
+*{
+    padding: 0px;
+    margin: 0px;
+}
+
+.banner{
+    background-image: url(../images/backgrd.png);
+    text-align: center;
+    line-height: 100px;
+}
+
+h1{
+    color: yellow;
+    text-shadow: 5px 6px 6px red;
+}
+
+.menu{
+    background-color: rgb(3, 201, 169);
+    margin-top: 10px;
+}
+
+.submenu{
+    display:none;
+}
+
+.menu  li, a{
+    display: inline-block;
+    padding: 3px;
+    color: white;
+    text-decoration: none;
+    background-color: rgb(4,147,114);
+}
+
+li:hover .submenu{
+    display: block;
+    position: absolute;
+    
+}
+.submenu li{
+    display: block;
+}
+
+.Container
+{
+    display: flex;
+}
+
+.left, .right
+{
+    background-color: rgb(197, 239, 247);
+    min-height: 500px;
+    width: 20%;
+}
+
+.left h3{
+    padding: 10px;
+    text-align: center;
+    color: white;
+    background-color: blue;
+    margin-top: 10px;
+	font-weight: bold;
+    margin-bottom:10px;
+}
+
+.left li{
+    padding-left: 10px;
+}
+.content{
+    width: 90%;
+}
+.content textarea{
+    width: 45%;
+    height: 200px;
+    margin: 10px;
+    float: left;
+    text-overflow: auto;
+    border: 2px dashed black;
+
+}
+
+.content textarea:nth-of-type(3)
+{
+    clear: left;
+}
+
+.right div{
+    background-color: rgb(255,249,222);
+	text-align: center;
+    padding: 50px;
+    margin: 20px;
+    border: 2px solid black;
+    border-radius: 30px;
+    box-shadow: 3px 5px 5px gray;
+}
+
+.footer{
+    background-color: blue;
+    text-align: center;
+    color: yellow;
+    padding: 10px;
+    height: 100%;
+}

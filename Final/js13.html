@@ -1,0 +1,50 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>js13</title>
+<style>
+        #canvas{border:1px solid red; width: 100%; max-width:600px}
+    </style>
+    <script
+        src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.js">
+    </script>
+</head>
+<body>
+    <p>
+        <label for="txtData">Nhập các giá trị:</label>
+        <input type="text" required id="txtData" value="20,50,70,80,40">
+        <button onclick="drawChart()">Draw Chart</button>
+    </p>
+    <canvas id="canvas"></canvas>
+    <script>
+        function drawChart() {
+            var xValues = document.getElementById("txtData").value.split(",");
+            var yValues =[];
+            for(i = 0; i < xValues.length; i++)
+                yValues[i] = Number(xValues[i]);
+            var barColors = [];
+            for(i = 0; i < xValues.length; i++)
+                barColors[i] ="rgb("+Math.floor(Math.random()*300)%256 +
+                "," + Math.floor(Math.random()*300)%256 +
+                "," + Math.floor(Math.random()*300)%256 + ")";
+            new Chart("canvas", {
+                type: "pie",
+                data: {
+                    labels: xValues,
+                    datasets: [{
+                        backgroundColor: barColors,
+                        data: yValues
+                    }]
+                },
+                options: {
+                    title: {
+                        display: true,
+                        text: "Pie Chart"
+                    }
+                }
+            });
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,26 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>js11</title>
+	<style>
+		.large{height: 957px; width: 451px }
+		.medium{height: 455px; width: 225px}
+		.small{height: 225px; width: 125px}
+	</style>
+</head>
+<body>
+	<h1>Img Resizing</h1>
+	<p>
+		<input type="radio" name="s1" value="small" onClick="setsize(this.value)">10%
+		<input type="radio" name="s1" value="medium" onClick="setsize(this.value)">25%
+		<input type="radio" name="s1" value="large" onClick="setsize(this.value)" checked>50%
+	</p>
+	<img id="img" class="large" src="images/pointlobos.jpg">
+	<script>
+		function setsize(value){
+			document.getElementById("img").className = value;
+		}
+	</script>
+</body>
+</html>

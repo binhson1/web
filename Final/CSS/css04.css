@@ -1,0 +1,27 @@
+@charset "utf-8";
+
+table{
+    border: 2px solid #aaa ;
+}
+
+table caption
+{
+    font-weight: bold;
+    text-align: center;
+}
+
+table tr:first-of-type{
+    background-color: rgb(153,153,153);
+    color: #fff;
+    text-align: center;
+}
+
+table tr:nth-of-type(even)
+{
+    background-color: rgb(239,239,239);
+}
+
+tr:nth-of-type(odd)
+{
+    background-color: rgb(204,204,204);
+}
